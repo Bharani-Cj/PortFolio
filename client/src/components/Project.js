@@ -4,7 +4,7 @@ const projectCard = [
     name: 'User-Authenticated',
     about:
       'User and process authentication are used to ensure that only authorized individuals or processes are allowed to access company IT resources',
-    link: 'https://dapper-paletas-20ee41.netlify.app/',
+    link: 'https://userss-authentication.netlify.app/',
   },
 ];
 
