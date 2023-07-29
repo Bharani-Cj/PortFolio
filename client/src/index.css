@@ -82,6 +82,7 @@ h6 {
   justify-content: space-between;
   flex-wrap: wrap;
   border-radius: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav ul li {
@@ -116,6 +117,7 @@ h6 {
   width: 100%;
   height: 500px;
   position: relative;
+  background-color: #ccc6c653;
 }
 
 #home .home_profile {
@@ -230,6 +232,7 @@ h6 {
   width: 100%;
   height: 800px;
   margin: auto;
+  background-color: rgba(105, 145, 245, 0.089);
 }
 
 #about .about_container {
@@ -486,7 +489,7 @@ h6 {
   }
 
   #about {
-    margin-top: 150px;
+    /* margin-top: 150px; */
   }
 
   #about .about_container img {
