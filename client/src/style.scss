@@ -14,6 +14,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p,
 h2,
 h3,
@@ -36,12 +40,29 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    i {
+      font-size: 40px;
+    }
   }
 }
 
 .theme.theme-dark {
   background-color: var(--dark_theme);
   color: #fff;
+
+  #home {
+    .home_profile {
+      .home_image {
+        outline: 3px solid var(--white-color);
+        background-color: var(--dark_theme);
+      }
+    }
+  }
+  .nav {
+    background-color: var(--dark_theme);
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  }
 
   a {
     color: #ffff;
@@ -66,12 +87,20 @@ h6 {
 }
 
 .nav {
+  width: 100%;
+  background-color: #fff;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  border-radius: 15px;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+  h3 {
+    color: var(--hover-background-color);
+  }
 
   ul {
     li {
@@ -81,7 +110,6 @@ h6 {
 
       a {
         color: black;
-
         text-decoration: none;
         position: relative;
       }
@@ -104,9 +132,11 @@ h6 {
 
 #home {
   padding: 100px;
+  padding-top: 180px;
   width: 100%;
-  height: 500px;
+  height: 650px;
   position: relative;
+  animation: transitionIn 0.5s ease-in-out;
 
   .home_profile {
     display: flex;
@@ -118,6 +148,10 @@ h6 {
       margin-top: 15px;
       display: flex;
       gap: 15px;
+
+      i {
+        font-size: 20px;
+      }
     }
 
     .home_stack {
@@ -137,13 +171,14 @@ h6 {
     .home_image {
       width: 300px;
       height: 300px;
-      background: url(./../public/img/Bharani-0.jpg);
+      background: url(./../public/img/Bharani.png);
       background-size: cover;
-      background-position: center;
+      background-position: left;
       box-shadow: 0 10px 5px 5px rgba(0, 0, 0, 0.2);
       animation: animate 5s ease-in-out infinite;
       transition: all 1s ease-in-out;
       outline: 3px solid black;
+      background-color: #bbb8b7;
     }
 
     @keyframes animate {
@@ -244,7 +279,8 @@ h6 {
 
 #project {
   width: 100%;
-  height: 800px;
+  height: fit-content;
+  padding: 100px 0px;
 
   .container {
     width: 60%;
@@ -276,7 +312,6 @@ h6 {
 
         img {
           width: 100%;
-          height: 100%;
           transition: transform 0.5s;
         }
         .layer {
@@ -517,5 +552,16 @@ h6 {
     .container {
       width: 100%;
     }
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }

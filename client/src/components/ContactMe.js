@@ -21,13 +21,7 @@ export function ContactMe() {
                 <i className="fab fa-linkedin"></i>
               </a>
             </div>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/bharani-c-859804258/"
-              download
-              className="btn btn2"
-            >
+            <a className="btn btn2" href="/resume/Bharani.pdf" download>
               Download CV
             </a>
           </div>

@@ -13,6 +13,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p,
 h2,
 h3,
@@ -36,10 +40,21 @@ h6 {
   align-items: center;
   justify-content: center;
 }
+.theme .themer_changer i {
+  font-size: 40px;
+}
 
 .theme.theme-dark {
   background-color: var(--dark_theme);
   color: #fff;
+}
+.theme.theme-dark #home .home_profile .home_image {
+  outline: 3px solid var(--white-color);
+  background-color: var(--dark_theme);
+}
+.theme.theme-dark .nav {
+  background-color: var(--dark_theme);
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 .theme.theme-dark a {
   color: white;
@@ -67,12 +82,19 @@ h6 {
 }
 
 .nav {
+  width: 100%;
+  background-color: #fff;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  border-radius: 15px;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.nav h3 {
+  color: var(--hover-background-color);
 }
 .nav ul li {
   display: inline-block;
@@ -100,9 +122,11 @@ h6 {
 
 #home {
   padding: 100px;
+  padding-top: 180px;
   width: 100%;
-  height: 500px;
+  height: 650px;
   position: relative;
+  animation: transitionIn 0.5s ease-in-out;
 }
 #home .home_profile {
   display: flex;
@@ -114,6 +138,9 @@ h6 {
   margin-top: 15px;
   display: flex;
   gap: 15px;
+}
+#home .home_profile .home_profileIn i {
+  font-size: 20px;
 }
 #home .home_profile .home_stack {
   display: flex;
@@ -130,13 +157,14 @@ h6 {
 #home .home_profile .home_image {
   width: 300px;
   height: 300px;
-  background: url(./../public/img/Bharani-0.jpg);
+  background: url(./../public/img/Bharani.png);
   background-size: cover;
-  background-position: center;
+  background-position: left;
   box-shadow: 0 10px 5px 5px rgba(0, 0, 0, 0.2);
   animation: animate 5s ease-in-out infinite;
   transition: all 1s ease-in-out;
   outline: 3px solid black;
+  background-color: #bbb8b7;
 }
 @keyframes animate {
   0% {
@@ -227,7 +255,9 @@ h6 {
 
 #project {
   width: 100%;
-  height: 800px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 100px 0px;
 }
 #project .container {
   width: 60%;
@@ -258,7 +288,6 @@ h6 {
 }
 #project .container .work_list .work img {
   width: 100%;
-  height: 100%;
   transition: transform 0.5s;
 }
 #project .container .work_list .work .layer {
@@ -463,5 +492,15 @@ h6 {
   }
   #project .container {
     width: 100%;
+  }
+}
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }/*# sourceMappingURL=style.css.map */
