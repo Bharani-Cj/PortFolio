@@ -472,6 +472,12 @@ h6 {
   .nav ul {
     display: none;
   }
+  #home {
+    text-align: center;
+  }
+  #home .home_profile .home_profileIn {
+    justify-content: center;
+  }
   #home .home_profile .home_stack {
     flex-direction: column;
   }
@@ -492,6 +498,9 @@ h6 {
   }
   #project .container {
     width: 100%;
+  }
+  #contact {
+    margin-top: 12em;
   }
 }
 @keyframes transitionIn {

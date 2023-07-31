@@ -524,7 +524,13 @@ h6 {
     }
   }
   #home {
+    text-align: center;
+
     .home_profile {
+      .home_profileIn {
+        justify-content: center;
+      }
+
       .home_stack {
         flex-direction: column;
       }
@@ -552,6 +558,9 @@ h6 {
     .container {
       width: 100%;
     }
+  }
+  #contact {
+    margin-top: 12em;
   }
 }
 
