@@ -8,6 +8,7 @@ import { ThemeSwitcher } from './components/ThemeSwitcher';
 import { Navigation } from './Navigation';
 export default function App() {
   const [theme, setTheme] = useState(true);
+
   return (
     <div className={theme ? 'theme theme-dark' : 'theme'}>
       <Navigation />
