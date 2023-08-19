@@ -6,12 +6,13 @@ const projectCard = [
       'User and process authentication are used to ensure that only authorized individuals or processes are allowed to access company IT resources',
     link: 'https://userss-authentication.netlify.app/',
   },
+
   {
     img: 'img/travel.jpg',
-    name: 'TravelApp - API Endpoint',
+    name: 'Stay-Station',
     about:
       'A travel app is a web application designed to assist travellers with various aspects of their journey. Travel apps come in a wide range of functionalities',
-    link: 'https://github.com/Bharani-Cj/Travel-App.git/',
+    link: 'https://stay-station.pages.dev/',
   },
 ];
 
