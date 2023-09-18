@@ -138,6 +138,7 @@ h6 {
   margin-top: 15px;
   display: flex;
   gap: 15px;
+  cursor: pointer;
 }
 #home .home_profile .home_profileIn i {
   font-size: 20px;
@@ -153,10 +154,11 @@ h6 {
   align-items: center;
   flex-direction: row;
   gap: 20px;
+  flex-wrap: wrap;
 }
 #home .home_profile .home_image {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   background: url(./../public/img/Bharani.png);
   background-size: cover;
   background-position: left;
@@ -289,6 +291,17 @@ h6 {
 #project .container .work_list .work img {
   width: 100%;
   transition: transform 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes scrollImage {
+  0% {
+    left: 0;
+  }
+  100% {
+    top: -100%;
+  }
 }
 #project .container .work_list .work .layer {
   width: 100%;
@@ -322,9 +335,6 @@ h6 {
   height: 60px;
   border-radius: 50%;
   text-align: center;
-}
-#project .container .work_list .work:hover img {
-  transform: scale(1.07);
 }
 #project .container .work_list .work:hover .layer {
   height: 100%;

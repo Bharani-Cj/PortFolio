@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export function Home() {
   return (
     <main id="home">
@@ -11,8 +12,16 @@ export function Home() {
             based in Coimbatore, TamilNadu. 📍
           </p>
           <div className="home_profileIn">
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>
+            <Link
+              onClick={() =>
+                (window.location.href = 'https://www.linkedin.com/in/bharani-c-859804258/')
+              }
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </Link>
+            <Link onClick={() => (window.location.href = 'https://github.com/Bharani-Cj')}>
+              <i class="fa-brands fa-github"></i>
+            </Link>
           </div>
           <div className="home_stack">
             <p>Tech Stack |</p>
@@ -25,6 +34,7 @@ export function Home() {
               <img src="logo/nodeJS.png" alt="nodeJS" width="30px" />
               <img src="logo/express.png" alt="express" width="30px" />
               <img src="logo/mongoDB.png" alt="mongoDB" width="30px" />
+              <img src="logo/Mysql.png" alt="mongoDB" width="30px" />
             </div>
           </div>
         </div>

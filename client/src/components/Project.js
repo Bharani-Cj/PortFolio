@@ -8,11 +8,12 @@ const projectCard = [
   },
 
   {
-    img: 'img/travel.jpg',
+    img: 'img/stay-station.jpeg',
     name: 'Stay-Station',
     about:
       'A travel app is a web application designed to assist travellers with various aspects of their journey. Travel apps come in a wide range of functionalities',
     link: 'https://stay-station.pages.dev/',
+    animate: true,
   },
 ];
 
@@ -33,9 +34,15 @@ export function Project() {
 }
 
 function ProjectCard({ projectCard }) {
+  let styles;
+  if (projectCard.animate) {
+    styles = {
+      animation: ' scrollImage 10s linear infinite',
+    };
+  }
   return (
     <div className="work">
-      <img src={projectCard.img} alt={projectCard.name} />
+      <img src={projectCard.img} alt={projectCard.name} style={styles} />
       <div className="layer">
         <h2>{projectCard.name}</h2>
         <p>{projectCard.about}</p>

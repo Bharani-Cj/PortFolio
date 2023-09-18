@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap');
 :root {
   --dark_theme: rgb(56, 53, 53);
   --white-color: #ffffff;
@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -148,6 +148,7 @@ h6 {
       margin-top: 15px;
       display: flex;
       gap: 15px;
+      cursor: pointer;
 
       i {
         font-size: 20px;
@@ -166,11 +167,12 @@ h6 {
       align-items: center;
       flex-direction: row;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .home_image {
-      width: 300px;
-      height: 300px;
+      width: 350px;
+      height: 350px;
       background: url(./../public/img/Bharani.png);
       background-size: cover;
       background-position: left;
@@ -313,6 +315,17 @@ h6 {
         img {
           width: 100%;
           transition: transform 0.5s;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        @keyframes scrollImage {
+          0% {
+            left: 0;
+          }
+          100% {
+            top: -100%;
+          }
         }
         .layer {
           width: 100%;
@@ -350,7 +363,7 @@ h6 {
         }
       }
       .work:hover img {
-        transform: scale(1.07);
+        // transform: scale(1.07);
       }
       .work:hover .layer {
         height: 100%;
